@@ -4,15 +4,14 @@ Ftdi::Ftdi(QWidget *parent) : QWidget(parent)
 {
 
 
-
-
-
 }
+
 
 Ftdi::~Ftdi()
 {
     FT_Close(ftHandle);
 }
+
 
 bool Ftdi::ftdiOpen()
 {
