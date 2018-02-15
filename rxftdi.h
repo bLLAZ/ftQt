@@ -32,7 +32,6 @@ signals:
 
 public slots:
     void process();
-    void testowy();
 
 };
 

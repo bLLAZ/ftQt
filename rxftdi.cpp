@@ -8,8 +8,8 @@ RxFTDI::~RxFTDI() { // Destructor
     // free resources
 }
 
-void RxFTDI::process() { // Process. Start processing data.
-    // allocate resources using new here
+void RxFTDI::process() {
+
     qDebug() << "RxFTDI hello!" << QThread::currentThreadId();
 
     while(true)
@@ -35,9 +35,4 @@ void RxFTDI::process() { // Process. Start processing data.
 
 void RxFTDI::stopProcessing() {
     emit finished();
-}
-
-void RxFTDI::testowy()
-{
-    qDebug() << "FFFFFFFFFFFFFFFFFFFFFF";
 }

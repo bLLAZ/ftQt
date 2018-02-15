@@ -53,9 +53,7 @@ bool Ftdi::createRxTxThreads ()
     Rx->moveToThread(RxThread);
     connect(RxThread, &QThread::started, Rx, &RxFTDI::process);
     connect(Rx, &RxFTDI::finished, RxThread, &QThread::quit);
-    connect(Rx, &RxFTDI::finished, RxThread, &QThread::quit);
     connect(Rx, &RxFTDI::finished, Rx, &RxFTDI::deleteLater);
-    connect(Rx, &RxFTDI::finished, Rx, &RxFTDI::testowy);
     connect(RxThread, &QThread::finished, RxThread, &QThread::deleteLater);
     RxThread->start();
 
